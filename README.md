@@ -15,6 +15,7 @@
 8. Type `CREATE DATABASE polls;`
 9. Type `GRANT ALL PRIVILEGES ON polls.* TO 'your-db-username'@'localhost';` - your-db-username - is a name of user in MySQL
 10. Type `exit`;
+11. Type `cd polls/`
 11. Type `mysql polls < init_db.sql `
 12. Тype `nano config.php`
 13. Enter host address, MySQL username ande MySQL password;

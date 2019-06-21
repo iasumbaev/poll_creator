@@ -21,3 +21,6 @@
 13. Enter host address, MySQL username and MySQL password;
 12. Go to `www.your-website-name.xx\polls\create`
 13. Use service
+
+
+**You can use service on ivan.deuxbit.ru/polls/create**

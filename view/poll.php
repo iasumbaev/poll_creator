@@ -16,7 +16,7 @@
         </ul>
         </p>
 
-        <?php if (!isset($_COOKIE[$poll->getUri()])) : ?>
+        <?php if (!$hasVoted) : ?>
 
             <div class="vote" v-if="hasVoted==false">
                 <div class="name">
@@ -25,8 +25,7 @@
                     <input v-model="name" id="name" name='name' type="text">
                 </div>
                 <div class="answers">
-                    <?php $answersIDs = $poll->getAnswersID(); ?>
-                    <?php foreach ($poll->getAnswers() as $index => $answer):
+                    <?php foreach ($answers as $index => $answer):
                         ?>
                         <input type="radio" v-model="answer" name="answer"
                                value="<?= $answersIDs[$index] ?>">
@@ -56,16 +55,17 @@
     <table v-if="resultsLength" class="my-table results-table">
         <tr>
             <th>Name</th>
-            <?php foreach ($poll->getAnswers() as $index => $answer) :
+            <?php foreach ($answers as $index => $answer) :
                 ?>
-                <th><?= $answer ?></th>
+                <th><?= $answer  ?></th>
             <?php endforeach; ?>
         </tr>
         <tr v-for="result in results">
             <td>{{result.username}}</td>
-            <?php foreach ($poll->getAnswers() as $index => $answer):
+            <?php foreach ($answersIDs as $index => $answerID):
                 ?>
-                <td v-if="result.answer==='<?= $answer ?>'">x</td>
+
+                <td v-if="result.answer_id==<?= $answerID?>">x</td>
                 <td v-else></td>
             <?php endforeach; ?>
         </tr>
@@ -83,6 +83,4 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="../resources/js/poll.js"></script>
-
-
 

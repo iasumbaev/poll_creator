@@ -124,7 +124,9 @@ button {
     border-color: #c3e6cb;
 }
 
-.results-table td {
+.results-table td,
+.results-table th{
+
     text-align: center;
 }
 

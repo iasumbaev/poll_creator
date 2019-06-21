@@ -11,7 +11,7 @@
 4. Type `nano /etc/apache2/sites-available/000-default.conf`
 5. Change `AllowOverride None` to `AllowOverride all`
 6. Type `sudo /etc/init.d/apache2 restart`
-7. Type `mysql -u your-db-username`
+7. Type `mysql -u root`
 8. Type `CREATE DATABASE polls;`
 9. Type `GRANT ALL PRIVILEGES ON polls.* TO 'your-db-username'@'localhost';` - your-db-username - is a name of user in MySQL
 10. Type `exit`;

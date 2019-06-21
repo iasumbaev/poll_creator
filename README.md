@@ -18,6 +18,6 @@
 11. Type `cd polls/`
 11. Type `mysql polls < init_db.sql `
 12. Тype `nano config.php`
-13. Enter host address, MySQL username ande MySQL password;
+13. Enter host address, MySQL username and MySQL password;
 12. Go to `www.your-website-name.xx\polls\create`
 13. Use service

@@ -31,7 +31,6 @@ class MainController
 
     function pollAction($uri)
     {
-
         $poll = $this->pollManager->getPollByUri($uri);
 
         if (is_null($poll)) {
@@ -41,9 +40,12 @@ class MainController
             } else {
                 echo 'Такого опроса не существует!';
                 return;
-
             }
         }
+
+        $hasVoted = isset($_COOKIE[$poll->getUri()]);
+        $answersIDs = $poll->getAnswersID();
+        $answers = $poll->getAnswers() ;
 
         require 'view/poll.php';
 

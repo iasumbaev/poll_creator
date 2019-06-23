@@ -133,3 +133,19 @@ button {
 .opacity-0 {
     opacity: 0;
 }
+
+.answers div {
+    display: inline-block;
+}
+
+.result {
+    overflow: auto;
+}
+
+.result p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

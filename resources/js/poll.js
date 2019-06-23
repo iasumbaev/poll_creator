@@ -49,6 +49,7 @@ const app = new Vue({
             },
 
             sendResult: function () {
+                this.errors = [];
                 pollID = this.$refs.question.getAttribute('data-id');
                 uri = this.$refs.question.getAttribute('data-uri');
 

@@ -36,21 +36,21 @@
                         <?php endforeach; ?>
                     </div>
 
-                    <input type="submit" class="submit-btn" @click="checkForm">
+                    <input type="submit" class="submit-btn" @click="checkForm" value="Submit">
                 </div>
                 <div v-else class="alert alert-green">
-                    Вы проголосовали в данном опросе!
+                    You voted on this poll!
                 </div>
 
             <?php else: ?>
                 <div class="alert alert-green">
-                    Вы уже проголосовали в данном опросе!
+                    You have already voted in this poll!
                 </div>
             <?php endif; ?>
 
 
         </form>
-        <h1>Результаты</h1>
+        <h1>Results</h1>
 
     </div>
     <div class="result">
@@ -74,7 +74,7 @@
             </tr>
         </table>
         <p v-else>
-            Ещё никто не проголовал в данном опросе!
+            No one has voted in this poll!
         </p>
 
     </div>

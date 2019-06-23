@@ -40,10 +40,10 @@ const app = new Vue({
                 this.errors = [];
 
                 if (!this.name) {
-                    this.errors.push('Требуется указать имя.');
+                    this.errors.push('Name is required');
                 }
                 if (!this.answer) {
-                    this.errors.push('Требуется указать ответ.');
+                    this.errors.push('Required to answer');
                 }
 
             },
